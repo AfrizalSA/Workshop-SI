@@ -6,9 +6,9 @@ For the legacy Bootstrap 3 version of this theme, you can view the [last stable 
 
 ## Preview
 
-[![SB Admin 2 Preview](http://localhost/tugas-repository/E41192241_RajihKharissuha/tugas4/web_bootsrap/contact.php)](http://localhost/tugas-repository/E41192241_RajihKharissuha/tugas4/web_bootsrap/contact.php)
+[![SB Admin 2 Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)
 
-**[Launch Live Preview](http://localhost/tugas-repository/E41192241_RajihKharissuha/tugas4/web_bootsrap/contact.php)**
+**[Launch Live Preview](https://startbootstrap.com/assets/img/screenshots/themes/sb-admin-2.png)**
 
 ## Status
 
