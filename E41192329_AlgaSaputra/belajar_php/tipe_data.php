@@ -1,7 +1,7 @@
 <?php
 
 // tipe data char (karakter)
-$jenis_kelamin = 'Laki-laki';
+$jenis_kelamin = 'L';
 
 // tipe data string (teks)
 $nama_lengkap = "Petani Kode";
