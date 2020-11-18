@@ -41,7 +41,7 @@
                   </div>
                   <?php
                   if (isset($_GET['pesan'])){
-                    $pesan = $GET['pesan'];
+                    $pesan = $_GET['pesan'];
                     if ($pesan == "gagal"){
                       ?>
                       <div class="alert alert-danger">
