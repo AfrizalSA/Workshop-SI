@@ -37,23 +37,23 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
                   </div>
                   <?php 
                     if (isset($_GET['pesan'])) {
                       # code...
                       $pesan = $_GET['pesan'];
-                      if ($pesan == "emailsalah") {
+                      if ($pesan == "usernamesalah") {
                   ?>
                   <div class="alert alert-danger">
-                    <strong>Danger!</strong> Anda gagal login,email tidak ditemukan.
+                    <strong>Peringatan!</strong> Anda gagal login,username tidak ditemukan.
                   </div>
                   <?php
                       }else if ($pesan=="passwordsalah") {
                         # code...
                     ?>
                   <div class="alert alert-danger">
-                    <strong>Danger!</strong> Anda gagal login,password salah.
+                    <strong>Peringatan!</strong> Anda gagal login,password salah.
                   </div>
                     <?php
                       }
@@ -61,7 +61,7 @@
                    ?>
                   <form class="user" method="post" action="login_process.php">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
+                      <input type="username" class="form-control form-control-user" id="exampleInputusername" aria-describedby="usernameHelp" placeholder="Masukkan Username" name="username">
                     </div>
                     <div class="form-group">
                       <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
