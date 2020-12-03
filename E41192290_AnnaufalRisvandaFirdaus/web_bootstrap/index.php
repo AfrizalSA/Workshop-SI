@@ -224,6 +224,17 @@
             <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
 
+          <?php
+          if (isset($_GET['pesan'])){
+            $pesan = $_GET['pesan'];
+            if ($pesan == "berhasil"){
+              ?>
+              <div class="alert alert-success"><strong>Berhasil!!</strong>Anda berhasil login</div>
+              <?php
+            }
+          }
+          ?>
+
           <!-- Content Row -->
           <div class="row">
 
@@ -522,7 +533,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+            <span>E41192290 &copy; Annaufal Risvanda Firdaus</span>
           </div>
         </div>
       </footer>
