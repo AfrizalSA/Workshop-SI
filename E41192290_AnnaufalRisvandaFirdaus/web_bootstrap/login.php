@@ -39,26 +39,32 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                   </div>
-                  <?php
-                  if (isset($_GET['pesan'])){
-                    $pesan = $_GET['pesan'];
-                    if ($pesan == "gagal"){
-                      ?>
-                      <div class="alert alert-danger">
-                        <strong>Peringatan!!</strong> Anda Gagal Login. Coba cek Username dan Password Anda.
-                      </div>
-                      <?php
-                    } 
-                  }
+                  <?php 
+                    if (isset($_GET['pesan'])) {
+                      # code...
+                      $pesan = $_GET['pesan'];
+                      if ($pesan == "emailsalah") {
                   ?>
+                  <div class="alert alert-danger">
+                    <strong>Danger!</strong> Anda gagal login,email tidak ditemukan.
+                  </div>
+                  <?php
+                      }else if ($pesan=="passwordsalah") {
+                        # code...
+                    ?>
+                  <div class="alert alert-danger">
+                    <strong>Danger!</strong> Anda gagal login,password salah.
+                  </div>
+                    <?php
+                      }
+                    }
+                   ?>
                   <form class="user" method="post" action="login_process.php">
                     <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..."
-                      name="email" required>
+                      <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password"
-                      name="password" required>
+                      <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
@@ -66,7 +72,7 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-user btn-block" name="submit">Login</button>
+                    <button type="submit" name="submit" class="btn btn-primary btn-user btn-block">Login</button>
                     <hr>
                     <a href="index.html" class="btn btn-google btn-user btn-block">
                       <i class="fab fa-google fa-fw"></i> Login with Google
