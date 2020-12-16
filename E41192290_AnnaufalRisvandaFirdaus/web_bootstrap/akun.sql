@@ -19,16 +19,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `web_bootstrap`
+-- Database: `akun`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Table structure for table `login`
 --
 
-CREATE TABLE `tb_user` (
+CREATE TABLE `login` (
   `id_user` int(4) NOT NULL,
   `nama` varchar(40) DEFAULT NULL,
   `email` varchar(40) DEFAULT NULL,
@@ -36,10 +36,10 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data for table `login`
 --
 
-INSERT INTO `tb_user` (`id_user`, `nama`, `email`, `password`) VALUES
+INSERT INTO `login` (`id_user`, `nama`, `email`, `password`) VALUES
 (1, 'Annaufal Risvanda Firdaus', 'annaufalrisvandafirdaus@gmail.com', '12345678');
 
 --
@@ -47,9 +47,9 @@ INSERT INTO `tb_user` (`id_user`, `nama`, `email`, `password`) VALUES
 --
 
 --
--- Indexes for table `tb_user`
+-- Indexes for table `login`
 --
-ALTER TABLE `tb_user`
+ALTER TABLE `login`
   ADD PRIMARY KEY (`id_user`);
 
 --
@@ -57,9 +57,9 @@ ALTER TABLE `tb_user`
 --
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT for table `login`
 --
-ALTER TABLE `tb_user`
+ALTER TABLE `login`
   MODIFY `id_user` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
