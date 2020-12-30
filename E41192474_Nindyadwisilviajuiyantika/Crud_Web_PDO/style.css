@@ -1,0 +1,34 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #000000;
+}
+
+.judul {
+    background: #142db9;
+    padding: 10px;
+    text-align: center;
+}
+
+.judul h1,h2{
+    height: 15px;
+    color: palegoldenrod;
+}
+
+a{
+    padding: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+.table{
+    border-collapse: collapse;
+}
+
+
+table.table th th , table.table tr td {
+    padding: 10px;
+    
+}
+h3,th,tr{
+    color: #000000;
+}
