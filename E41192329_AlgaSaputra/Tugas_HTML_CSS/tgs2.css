@@ -1,0 +1,10 @@
+head {
+    font-family: cursive ;
+    color: tomato;
+}
+body {
+    background-color: white;
+    background-image: url(bg.png);
+    font-family: arial;
+    color: white;
+}
