@@ -27,6 +27,10 @@ class M_transaksi extends CI_Model {
 				'created_at'=>date('Y-m-d H:i')
 			);
 			$this->db->insert('detail_pesanan',$data);
+			$getsisa=$this->db->query("select jumlah from barang where idbarang='".$data_multi['idbarang_multi']."' ")->row()->jumlah;
+			$sisa=array('jumlah'=>($getsisa-$data_multi['jumlah_multi']));
+			$this->db->where('idbarang',$data_multi['idbarang_multi']);
+			$this->db->update('barang',$sisa);
 		}
 		$laporan=array(
 			'KODE_PESANAN'=>$idpesanan,

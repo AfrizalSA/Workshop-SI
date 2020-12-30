@@ -23,9 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/admin2';
+$config['base_url'] = 'http://localhost/admin';
 
-$config['nama_toko']='Distro&nbsp;<small>Afterkids</small>';
+$config['nama_toko']='Distro&nbsp;Afterkids';
 $config['image_toko']= 'assets/afterkids.png';
 $config['versi']='0.1';
 /*

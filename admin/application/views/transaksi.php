@@ -254,13 +254,19 @@ $('#tblHapusan').find(".barang_multi").autocomplete({
     appendTo: $('#namabarang'),
     autoFocus: true,
     select: function (event, ui) {
+      if(ui.item.jumlah=='0'){
+          alert("Stok barang 0 Tolong di update Dahulu");
+          return false;
+        }else{
       $(this).val(ui.item.id);
       var rows = $(this).closest('tr');
       rows.find('.idbarang_multi').val(ui.item.idbarang);
-      rows.find('.barang_multi').val(ui.item.namabarang);
-      rows.find('.harga_multi').val(ui.item.hargajual);
-      rows.find('.jumlah_multi').focus();
+      rows.find( ".nama_barang_multi" ).val(ui.item.namabarang).show().prop('readonly', true);
+      rows.find( ".harga_multi" ).val( ui.item.hargajual );
+        rows.find( ".stock_multi" ).val( ui.item.jumlah );
+        rows.find( ".jumlah_multi" ).focus();
       return false;
+        }
     }
   });
 
@@ -358,6 +364,10 @@ $('#tblHapusan').find('.jumlah_multi').on('keyup', function () {
       minLength:2,
       appendTo: $('#namabarang'),
       select: function( event, ui ) {
+        if(ui.item.jumlah=='0'){
+          alert("Stok barang 0 Tolong di update Dahulu");
+          return false;
+        }else{
         $("#namabarang .barang_multi ").html( ui.item.idbarang );
         $(this).closest("tr").find( ".idbarang_multi" ).val( ui.item.idbarang );
         $(this).closest("tr").find( ".barang_multi" ).hide();
@@ -365,7 +375,7 @@ $('#tblHapusan').find('.jumlah_multi').on('keyup', function () {
         $(this).closest("tr").find( ".harga_multi" ).val( ui.item.hargajual );
         $(this).closest("tr").find( ".stock_multi" ).val( ui.item.jumlah );
         $(this).closest("tr").find( ".jumlah_multi" ).focus();
-        
+        }
         // $('#addItem').attr('style', 'display:visible');
         // $('#addJasa').attr('style', 'display:visible');
       }
