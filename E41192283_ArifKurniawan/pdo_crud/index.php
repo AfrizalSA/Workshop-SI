@@ -26,7 +26,7 @@
     ?>
     <br>
     <a href="input.php" class="tombol"> + Tambah Data Baru</a>
-
+    
     <h3>Data User</h3>
     <table border="1" class="table">
     <tr>
