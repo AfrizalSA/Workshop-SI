@@ -22,8 +22,8 @@
       <!-- /.row --><div class="box">
 
             <div class="box-header">
-              <h3 class="box-title">TRANSAKSI LIST</h3>
-              <button class="btn btn-primary btn-block btn-flat" id="btn-add-member" onclick="buka();">TAMBAH TRANSAKSI</button>
+              <h3 class="box-title">Transaksi List</h3>
+              <button class="btn btn-primary btn-block btn-flat" id="btn-add-member" onclick="buka();">Tambah Transaksi</button>
              
             </div>
             <!-- /.box-header -->
@@ -34,7 +34,7 @@
 <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">NO</th>
 <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">TANGGAL </th>
 <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">NAMA PEMBELI</th>
-<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">QTY BARANG</th>
+<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">JUMLAH BARANG</th>
 <th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">TOTAL HARGA </th>
 <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
                                         </tr>
@@ -84,7 +84,7 @@
     </div>
       <div class="modal-body">
          <div class="box-header">
-              <h3 class="box-title">TRANSAKSI LIST</h3>
+              <h3 class="box-title">Transaksi List</h3>
             </div>
             <div class="box-body">
               <form role="form" class="form-horizontal" id="form_schedule" method="post">
@@ -163,8 +163,8 @@
             
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" id="cancel_hapusan"onclick="cancel_hapusan();">Cancel</button>
-        <button type="button" class="btn btn-primary" id="hapusan_save" onclick="save_hapusan();">Save changes</button>
+        <button type="button" class="btn btn-secondary" id="cancel_hapusan"onclick="cancel_hapusan();">Batal</button>
+        <button type="button" class="btn btn-primary" id="hapusan_save" onclick="save_hapusan();">BAYAR</button>
       </div>
    <!--  </div> -->
   </div>

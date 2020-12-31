@@ -17,7 +17,7 @@
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu tree" data-widget="tree">
-        <li class="header">MAIN NAVIGATION</li>
+        <li class="header">Menu Utama</li>
         <li>
           <a href="<?php echo base_url('dashboard')?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -26,13 +26,13 @@
         <li>
           <a href="<?php echo site_url('barang')?>">
             <i class="fa fa-gift"></i>
-            <span>DAFTAR BARANG</span>
+            <span>Daftar Barang</span>
           </a>
         </li>
         <li class="">
           <a href="<?php echo base_url('transaksi')?>">
             <i class="fa fa-shopping-cart"></i>
-            <span>TRANSAKSI</span>
+            <span>Daftar Transaksi</span>
           </a>
         </li>
         <li>
