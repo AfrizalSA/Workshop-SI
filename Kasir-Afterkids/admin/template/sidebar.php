@@ -25,19 +25,18 @@
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Data Barang <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
+                        <i class="fa fa-archive" aria-hidden="true"></i>
+                          <span>Data <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="index.php?page=barang">Barang</a></li>
-                          <li><a  href="index.php?page=kategori">Kategori</a></li>
-                          <li><a  href="index.php?page=user">User</a></li>
+                          <li><a  href="index.php?page=barang">Data Barang</a></li>
+                          <li><a  href="index.php?page=kategori">Data Kategori</a></li>
                       </ul>
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Data Transaksi <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                          <span>Transaksi <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
                       </a>
                       <ul class="sub">
                           <li><a  href="index.php?page=jual">Transaksi Penjualan</a></li>
@@ -46,11 +45,12 @@
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
-                          <i class="fa fa-cog"></i>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                           <span>Pengaturan <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
                       </a>
                       <ul class="sub">
                           <li><a href="index.php?page=pengaturan">Pengaturan Toko</a></li>
+                          <li><a  href="index.php?page=user">Pengaturan Profil</a></li>
                       </ul>
                   </li>
               </ul>

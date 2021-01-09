@@ -45,7 +45,7 @@
 						
 						<!-- Trigger the modal with a button -->
 						<button type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-plus"></i> Insert Data</button>
+							<i class="fa fa-plus"></i> Tambah Barang</button>
 						<div class="clearfix"></div>
 						<br/>
 						<!-- view barang -->	
@@ -198,8 +198,8 @@
 										</table>
 									</div>
 									<div class="modal-footer">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Insert Data</button>
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Simpan Data</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
 									</div>
 								</form>
 							</div>
