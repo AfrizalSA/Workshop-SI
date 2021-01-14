@@ -83,14 +83,14 @@
 													<td><?php echo $isi['nama_barang'];?></td>
 													<td>
 														<form method="POST" action="fungsi/edit/edit.php?jual=jual">
-															<input type="number" name="jumlah" value="<?php echo $isi['jumlah'];?>" class="form-control">
+															<input type="number" name="jumlah" value="<?php echo $isi['jumlah'];?>" class="form-control" required="" min="1" max="9999999999">
 															<input type="hidden" name="id" value="<?php echo $isi['id_penjualan'];?>" class="form-control">
 															<input type="hidden" name="id_barang" value="<?php echo $isi['id_barang'];?>" class="form-control">
 													</td>
 													<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
 													<td><?php echo $isi['nm_member'];?></td>
 													<td>
-															<button type="submit" class="btn btn-warning">Update</button>
+															<button type="submit" class="btn btn-warning" required="">Update</button>
 														</form>
 														<a href="fungsi/hapus/hapus.php?jual=jual&id=<?php echo $isi['id_penjualan'];?>&brg=<?php echo $isi['id_barang'];?>
 														&jml=<?php echo $isi['jumlah']; ?>"  class="btn btn-danger"><i class="fa fa-times"></i>
@@ -122,7 +122,7 @@
 														$periode = $_POST['periode'];
 														$jumlah_dipilih = count($id_barang);
 														
-														for($x=0;$x<$jumlah_dipilih;$x++){
+														for($x=1;$x<$jumlah_dipilih;$x++){
 
 															$d = array($id_barang[$x],$id_member[$x],$jumlah[$x],$total[$x],$tgl_input[$x],$periode[$x]);
 															$sql = "INSERT INTO nota (id_barang,id_member,jumlah,total,tanggal_input,periode) VALUES(?,?,?,?,?,?)";
@@ -157,8 +157,8 @@
 												<?php foreach($hasil_penjualan as $isi){;?>
 													<input type="hidden" name="id_barang[]" value="<?php echo $isi['id_barang'];?>">
 													<input type="hidden" name="id_member[]" value="<?php echo $isi['id_member'];?>">
-													<input type="hidden" name="jumlah[]" value="<?php echo $isi['jumlah'];?>">
-													<input type="hidden" name="total1[]" value="<?php echo $isi['total'];?>">
+													<input type="hidden" name="jumlah[]" value="<?php echo $isi['jumlah'];?>" min="1" max="9999999999" >
+													<input type="hidden" name="total1[]" value="<?php echo $isi['total'];?>" required="">
 													<input type="hidden" name="tgl_input[]" value="<?php echo $isi['tanggal_input'];?>">
 													<input type="hidden" name="periode[]" value="<?php echo date('m-Y');?>">
 												<?php $no++; }?>
@@ -167,7 +167,7 @@
 													<td><input type="text" class="form-control" name="total" value="<?php echo $total_bayar;?>"></td>
 												
 													<td>Bayar  </td>
-													<td><input type="text" class="form-control" name="bayar" value="<?php echo $bayar;?>"></td>
+													<td><input type="number" class="form-control" name="bayar" value="<?php echo $bayar;?>" required="" min="1" max="9999999999"></td>
 													<td><button class="btn btn-success"><i class="fa fa-shopping-cart"></i> Bayar</button>
 													<?php  if(!empty($_GET['nota'] == 'yes')) {?>
 													 <a class="btn btn-danger" href="fungsi/hapus/hapus.php?penjualan=jual">
@@ -179,11 +179,6 @@
 												<td><input type="text" class="form-control" value="<?php echo $hitung;?>"></td>
 												<td></td>
 												<td>
-													<a href="print.php?nm_member=<?php echo $_SESSION['admin']['nm_member'];?>
-													&bayar=<?php echo $bayar;?>&kembali=<?php echo $hitung;?>" target="_blank">
-													<button class="btn btn-default">
-														<i class="fa fa-print"></i> Print Untuk Bukti Pembayaran
-													</button></a>
 												</td>
 
 											</tr>

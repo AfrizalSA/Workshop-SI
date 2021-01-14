@@ -2,7 +2,7 @@
       <!--footer start-->
       <footer class="site-footer">
           <div class="text-center">
-            Kelompok 3 - Golongan D
+            Aplikasi Kasir Distro Afterkids
           </div>
       </footer>
       <!--footer end-->

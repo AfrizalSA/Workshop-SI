@@ -31,7 +31,9 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword">
 
-    <title>Log In Aplikasi Afterkids</title>
+	<title>Log In Aplikasi Afterkids</title>
+	<!-- Logo Title -->
+	<link href="assets/img/user/Logo.png" rel="shortcut icon">
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -49,7 +51,7 @@
     <![endif]-->
   </head>
 
-  <body style="background:#004643;color:#fff;">
+  <body style="background: -webkit-linear-gradient(left, #a6f77b, #2dbd6e);">
 
       <!-- **********************************************************************************************************************************************************
       MAIN CONTENT

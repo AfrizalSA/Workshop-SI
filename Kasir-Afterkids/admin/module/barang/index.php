@@ -45,7 +45,7 @@
 						
 						<!-- Trigger the modal with a button -->
 						<button type="button" class="btn btn-primary btn-md pull-right" data-toggle="modal" data-target="#myModal">
-							<i class="fa fa-plus"></i> Insert Data</button>
+							<i class="fa fa-plus"></i> Tambah Barang</button>
 						<div class="clearfix"></div>
 						<br/>
 						<!-- view barang -->	
@@ -172,24 +172,23 @@
 											</tr>
 											<tr>
 												<td>Harga Beli</td>
-												<td><input type="number" placeholder="Harga beli" required class="form-control" name="beli"></td>
+												<td><input type="number" placeholder="Harga beli" required class="form-control" name="beli" min="1" max="9999999999"></td>
 											</tr>
 											<tr>
 												<td>Harga Jual</td>
-												<td><input type="number" placeholder="Harga Jual" required class="form-control"  name="jual"></td>
+												<td><input type="number" placeholder="Harga Jual" required class="form-control"  name="jual" min="1" max="9999999999"></td>
 											</tr>
 											<tr>
 												<td>Satuan Barang</td>
 												<td>
 													<select name="satuan" class="form-control" required>
-														<option value="#">Pilih Satuan</option>
 														<option value="PCS">PCS</option>
 													</select>
 												</td>
 											</tr>
 											<tr>
 												<td>Stok</td>
-												<td><input type="number" required Placeholder="Stok" class="form-control"  name="stok"></td>
+												<td><input type="number" required Placeholder="Stok" class="form-control"  name="stok" min="1" max="9999999999"></td>
 											</tr>
 											<tr>
 												<td>Tanggal Input</td>
@@ -198,8 +197,8 @@
 										</table>
 									</div>
 									<div class="modal-footer">
-										<button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Insert Data</button>
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary"><i class="fa fa-plus"></i> Simpan Data</button>
+										<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
 									</div>
 								</form>
 							</div>

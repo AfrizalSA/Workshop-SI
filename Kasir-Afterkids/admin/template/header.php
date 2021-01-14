@@ -8,6 +8,8 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
     <title>Kasir Afterkids</title>
+    <!-- Logo Title -->
+    <link href="assets/img/user/Logo.png" rel="shortcut icon">
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -27,7 +29,7 @@
         <script type="text/javascript" src="assets/datatables/dataTables.bootstrap.js"></script>
         <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
     <style>
-		.header{background:#328f6b; color:#fff;}
+		.header{background: -webkit-linear-gradient(left, #a6f77b, #2dbd6e);}
 		#main-content{ background:#fff;}
 		#hidden {display:none}
 	</style>
