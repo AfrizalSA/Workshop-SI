@@ -3,9 +3,15 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+<<<<<<< HEAD
 -- Generation Time: Jan 09, 2021 at 01:45 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
+=======
+-- Waktu pembuatan: 09 Jan 2021 pada 05.09
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
+>>>>>>> 552ff66e0f2ce2bcb0005c67bf72bccc21b651b1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -136,7 +142,11 @@ CREATE TABLE `nota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+<<<<<<< HEAD
 -- Dumping data for table `nota`
+=======
+-- Dumping data untuk tabel `nota`
+>>>>>>> 552ff66e0f2ce2bcb0005c67bf72bccc21b651b1
 --
 
 INSERT INTO `nota` (`id_nota`, `id_barang`, `id_member`, `jumlah`, `total`, `tanggal_input`, `periode`) VALUES
@@ -170,7 +180,8 @@ CREATE TABLE `penjualan` (
 
 --
 -- Dumping data for table `penjualan`
---
+
+
 
 INSERT INTO `penjualan` (`id_penjualan`, `id_barang`, `id_member`, `jumlah`, `total`, `tanggal_input`) VALUES
 (25, 'BR001', 1, '1', '30000', '9 January 2021, 2:39'),
@@ -239,7 +250,11 @@ ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`id_penjualan`);
 
 --
+<<<<<<< HEAD
 -- Indexes for table `toko`
+=======
+-- Indeks untuk tabel `toko`
+>>>>>>> 552ff66e0f2ce2bcb0005c67bf72bccc21b651b1
 --
 ALTER TABLE `toko`
   ADD PRIMARY KEY (`id_toko`);
