@@ -66,7 +66,7 @@
                       	<div class="col-md-3">
                       		<div class="panel panel-info">
                       			<div class="panel-heading">
-						  			<h5><i class="fa fa-money"></i> Telah Terjual</h5>
+						  			<h5> <i class="fa fa-money" aria-hidden="true"></i> Telah Terjual</h5>
                       			</div>
                       			<div class="panel-body">
 									<center><h1><?php echo $jual['stok'];?></h1></center>
