@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2021 at 04:13 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.34
+-- Waktu pembuatan: 27 Jan 2021 pada 17.56
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Struktur dari tabel `barang`
 --
 
 CREATE TABLE `barang` (
@@ -44,22 +44,20 @@ CREATE TABLE `barang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `barang`
+-- Dumping data untuk tabel `barang`
 --
 
 INSERT INTO `barang` (`id`, `id_barang`, `id_kategori`, `nama_barang`, `merk`, `warna`, `ukuran`, `harga_beli`, `harga_jual`, `satuan_barang`, `stok`, `tgl_input`, `tgl_update`) VALUES
-(1, 'BR001', 1, 'T-Shirt Lengan Panjang', 'Afterkids', '', '', 25000, 30000, 'PCS', 10, '6 October 2020, 0:41', '9 January 2021, 7:42'),
-(2, 'BR002', 2, 'Jeans', 'Afterkids', '', '', 50000, 70000, 'PCS', 8, '6 October 2020, 0:41', '9 January 2021, 7:41'),
-(3, 'BR003', 1, 'T-Shirt Polos', 'Afterkids', '', '', 15000, 30000, 'PCS', 8, '6 October 2020, 1:34', '9 January 2021, 7:41'),
+(1, 'BR001', 1, 'T-Shirt Polkadot', 'Afterkids', '', '', 25000, 30000, 'PCS', 10, '6 October 2020, 0:41', '27 January 2021, 23:27'),
+(2, 'BR002', 2, 'Chinos', 'Afterkids', '', '', 50000, 70000, 'PCS', 5, '6 October 2020, 0:41', '27 January 2021, 23:27'),
+(3, 'BR003', 1, 'T-Shirt Polos', 'Afterkids', '', '', 15000, 30000, 'PCS', 4, '6 October 2020, 1:34', '9 January 2021, 7:41'),
 (4, 'BR004', 3, 'Bomber', 'Afterkids', '', '', 90000, 110000, 'PCS', 12, '9 January 2021, 7:40', NULL),
-(5, 'BR005', 4, 'Straw Hat white stripe', 'Adidas', '', '', 25000, 50000, 'PCS', 100, '13 January 2021, 13:09', NULL),
-(8, 'BR007', 2, 'celana panjang hitam', 'Adidas', '', '', 50000, 100000, 'PCS', 67, '13 January 2021, 13:42', NULL),
-(11, 'BR009', 2, 'Celana jeans', 'Levis', '', '', 25000, 50000, 'PCS', 200, '27 January 2021, 20:58', NULL);
+(5, 'BR005', 4, 'Snapback', 'Adidas', '', '', 25000, 50000, 'PCS', 100, '13 January 2021, 13:09', '27 January 2021, 23:27');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -69,19 +67,20 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`, `tgl_input`) VALUES
 (1, 'Baju', '7 May 2017, 10:23'),
 (2, 'Celana', '7 May 2017, 10:28'),
 (3, 'Jaket', '6 October 2020, 0:19'),
-(4, 'Topi', '6 October 2020, 0:20');
+(4, 'Topi', '6 October 2020, 0:20'),
+(8, 'Ikat Pinggang', '27 January 2021, 22:47');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
@@ -92,7 +91,7 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `login`
+-- Dumping data untuk tabel `login`
 --
 
 INSERT INTO `login` (`id_login`, `user`, `pass`, `id_member`) VALUES
@@ -101,7 +100,7 @@ INSERT INTO `login` (`id_login`, `user`, `pass`, `id_member`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `member`
+-- Struktur dari tabel `member`
 --
 
 CREATE TABLE `member` (
@@ -115,7 +114,7 @@ CREATE TABLE `member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `member`
+-- Dumping data untuk tabel `member`
 --
 
 INSERT INTO `member` (`id_member`, `nm_member`, `alamat_member`, `telepon`, `email`, `gambar`, `NIK`) VALUES
@@ -124,7 +123,7 @@ INSERT INTO `member` (`id_member`, `nm_member`, `alamat_member`, `telepon`, `ema
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nota`
+-- Struktur dari tabel `nota`
 --
 
 CREATE TABLE `nota` (
@@ -138,50 +137,22 @@ CREATE TABLE `nota` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `nota`
+-- Dumping data untuk tabel `nota`
 --
 
 INSERT INTO `nota` (`id_nota`, `id_barang`, `id_member`, `jumlah`, `total`, `tanggal_input`, `periode`) VALUES
-(1, 'BR001', 1, '4', '12000', '6 October 2020, 0:45', '10-2020'),
-(2, 'BR001', 1, '4', '12000', '6 October 2020, 0:45', '10-2020'),
-(3, 'BR001', 1, '4', '12000', '6 October 2020, 0:45', '10-2020'),
-(4, 'BR001', 1, '4', '12000', '6 October 2020, 0:45', '10-2020'),
-(5, 'BR001', 1, '2', '6000', '6 October 2020, 0:49', '10-2020'),
-(6, 'BR001', 1, '2', '6000', '6 October 2020, 0:49', '10-2020'),
-(7, 'BR001', 1, '2', '6000', '6 October 2020, 1:15', '10-2020'),
-(8, 'BR002', 1, '2', '6000', '6 October 2020, 1:17', '10-2020'),
-(9, 'BR001', 1, '2', '6000', '6 October 2020, 1:20', '10-2020'),
-(10, 'BR001', 1, '1', '30000', '9 January 2021, 2:39', '01-2021'),
-(11, 'BR002', 1, '2', '140000', '9 January 2021, 2:39', '01-2021'),
-(12, 'BR003', 1, '2', '60000', '9 January 2021, 2:39', '01-2021'),
-(13, 'BR001', 1, '1', '30000', '9 January 2021, 2:39', '01-2021'),
-(14, 'BR002', 1, '2', '140000', '9 January 2021, 2:39', '01-2021'),
-(15, 'BR003', 1, '2', '60000', '9 January 2021, 2:39', '01-2021'),
-(16, 'BR001', 1, '1', '30000', '9 January 2021, 2:39', '01-2021'),
-(17, 'BR002', 1, '2', '140000', '9 January 2021, 2:39', '01-2021'),
-(18, 'BR003', 1, '2', '60000', '9 January 2021, 2:39', '01-2021'),
-(19, 'BR001', 1, '0', '0', '13 January 2021, 21:45', '01-2021'),
-(20, 'BR001', 1, '0', '0', '13 January 2021, 21:45', '01-2021'),
-(21, 'BR001', 1, '0', '0', '13 January 2021, 21:48', '01-2021'),
-(22, 'BR001', 1, '0', '0', '13 January 2021, 21:48', '01-2021'),
-(23, 'BR001', 1, '0', '0', '13 January 2021, 21:48', '01-2021'),
-(24, 'BR001', 1, '0', '0', '13 January 2021, 22:37', '01-2021'),
-(25, 'BR007', 1, '50', '5000000', '27 January 2021, 10:52', '01-2021'),
-(26, 'BR007', 1, '1', '100000', '27 January 2021, 21:08', '01-2021'),
-(27, 'BR007', 1, '1', '100000', '27 January 2021, 21:42', '01-2021'),
-(28, 'BR007', 1, '1', '100000', '27 January 2021, 21:42', '01-2021'),
-(29, 'BR007', 1, '2', '200000', '27 January 2021, 21:42', '01-2021'),
-(30, 'BR007', 1, '2', '200000', '27 January 2021, 21:42', '01-2021'),
-(31, 'BR007', 1, '2', '200000', '27 January 2021, 21:42', '01-2021'),
-(32, 'BR007', 1, '5', '500000', '27 January 2021, 21:57', '01-2021'),
-(33, 'BR007', 1, '5', '500000', '27 January 2021, 21:57', '01-2021'),
-(34, 'BR007', 1, '5', '500000', '27 January 2021, 21:57', '01-2021'),
-(35, 'BR007', 1, '10', '1000000', '27 January 2021, 21:57', '01-2021');
+(36, 'BR003', 1, '2', '60000', '27 January 2021, 22:52', '01-2021'),
+(37, 'BR005', 1, '99', '4950000', '27 January 2021, 22:55', '01-2021'),
+(38, 'BR003', 1, '2', '60000', '27 January 2021, 22:52', '01-2021'),
+(39, 'BR003', 1, '2', '60000', '27 January 2021, 22:52', '01-2021'),
+(40, 'BR002', 1, '7', '490000', '27 January 2021, 23:06', '01-2021'),
+(41, 'BR006', 1, '5', '5000000', '27 January 2021, 23:08', '01-2021'),
+(42, 'BR002', 1, '3', '210000', '27 January 2021, 23:26', '01-2021');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjualan`
+-- Struktur dari tabel `penjualan`
 --
 
 CREATE TABLE `penjualan` (
@@ -193,10 +164,17 @@ CREATE TABLE `penjualan` (
   `tanggal_input` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `penjualan`
+--
+
+INSERT INTO `penjualan` (`id_penjualan`, `id_barang`, `id_member`, `jumlah`, `total`, `tanggal_input`) VALUES
+(49, 'BR002', 1, '3', '210000', '27 January 2021, 23:26');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `toko`
+-- Struktur dari tabel `toko`
 --
 
 CREATE TABLE `toko` (
@@ -208,100 +186,100 @@ CREATE TABLE `toko` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `toko`
+-- Dumping data untuk tabel `toko`
 --
 
 INSERT INTO `toko` (`id_toko`, `nama_toko`, `alamat_toko`, `tlp`, `nama_pemilik`) VALUES
-(1, 'Afterkids', 'Jl. Tegalbesar - Jember', '082235301951', 'Aditya Yoga Pratama');
+(1, 'Afterkids Store', 'Jl. Tegalbesar - Jember', '082235301951', 'Aditya Yoga Pratama');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `barang`
+-- Indeks untuk tabel `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `login`
+-- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_login`);
 
 --
--- Indexes for table `member`
+-- Indeks untuk tabel `member`
 --
 ALTER TABLE `member`
   ADD PRIMARY KEY (`id_member`);
 
 --
--- Indexes for table `nota`
+-- Indeks untuk tabel `nota`
 --
 ALTER TABLE `nota`
   ADD PRIMARY KEY (`id_nota`);
 
 --
--- Indexes for table `penjualan`
+-- Indeks untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
   ADD PRIMARY KEY (`id_penjualan`);
 
 --
--- Indexes for table `toko`
+-- Indeks untuk tabel `toko`
 --
 ALTER TABLE `toko`
   ADD PRIMARY KEY (`id_toko`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `barang`
+-- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_kategori` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `member`
+-- AUTO_INCREMENT untuk tabel `member`
 --
 ALTER TABLE `member`
   MODIFY `id_member` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `nota`
+-- AUTO_INCREMENT untuk tabel `nota`
 --
 ALTER TABLE `nota`
-  MODIFY `id_nota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_nota` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT for table `penjualan`
+-- AUTO_INCREMENT untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  MODIFY `id_penjualan` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_penjualan` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
--- AUTO_INCREMENT for table `toko`
+-- AUTO_INCREMENT untuk tabel `toko`
 --
 ALTER TABLE `toko`
   MODIFY `id_toko` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
