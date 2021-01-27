@@ -172,11 +172,11 @@
 											</tr>
 											<tr>
 												<td>Harga Beli</td>
-												<td><input type="number" placeholder="Harga beli" required class="form-control" name="beli" min="1" max="9999999999"></td>
+												<td><input type="number" placeholder="Harga beli" required class="form-control" min="1" max="9999999999" name="beli"></td>
 											</tr>
 											<tr>
 												<td>Harga Jual</td>
-												<td><input type="number" placeholder="Harga Jual" required class="form-control"  name="jual" min="1" max="9999999999"></td>
+												<td><input type="number" placeholder="Harga Jual" required class="form-control" min="1" max="9999999999" name="jual"></td>
 											</tr>
 											<tr>
 												<td>Satuan Barang</td>
@@ -188,7 +188,7 @@
 											</tr>
 											<tr>
 												<td>Stok</td>
-												<td><input type="number" required Placeholder="Stok" class="form-control"  name="stok" min="1" max="9999999999"></td>
+												<td><input type="number" required Placeholder="Stok" class="form-control" min="1" max="9999999999" name="stok"></td>
 											</tr>
 											<tr>
 												<td>Tanggal Input</td>

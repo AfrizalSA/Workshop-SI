@@ -4,7 +4,7 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
-<?php 
+	  <?php 
 	$id = $_GET['barang'];
 	$hasil = $lihat -> barang_edit($id);
 ?>
@@ -53,25 +53,24 @@
 								</tr>
 								<tr>
 									<td>Harga Beli</td>
-									<td><input type="number" class="form-control" value="<?php echo $hasil['harga_beli'];?>" name="beli"></td>
+									<td><input type="number" class="form-control" min="1" max="9999999999" value="<?php echo $hasil['harga_beli'];?>" name="beli"></td>
 								</tr>
 								<tr>
 									<td>Harga Jual</td>
-									<td><input type="number" class="form-control" value="<?php echo $hasil['harga_jual'];?>" name="jual"></td>
+									<td><input type="number" class="form-control" min="1" max="9999999999" value="<?php echo $hasil['harga_jual'];?>" name="jual"></td>
 								</tr>
 								<tr>
 									<td>Satuan Barang</td>
 									<td>
 										<select name="satuan" class="form-control">
 											<option value="<?php echo $hasil['satuan_barang'];?>"><?php echo $hasil['satuan_barang'];?></option>
-											<option value="#">Pilih Satuan</option>
 											<option value="PCS">PCS</option>
 										</select>
 									</td>
 								</tr>
 								<tr>
 									<td>Stok</td>
-									<td><input type="number" class="form-control" value="<?php echo $hasil['stok'];?>" name="stok"></td>
+									<td><input type="number" class="form-control" min="1" max="9999999999" value="<?php echo $hasil['stok'];?>" name="stok"></td>
 								</tr>
 								<tr>
 									<td>Tanggal Update</td>
