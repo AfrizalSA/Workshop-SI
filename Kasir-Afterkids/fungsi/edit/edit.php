@@ -77,20 +77,6 @@ if(!empty($_SESSION['admin'])){
 		echo '<script>window.location="../../index.php?page=barang/edit&barang='.$id.'&success=edit-data"</script>';
 	}
 
-	if(!empty($_GET['kategori'])){
-		$id = htmlentities($_POST['id_kategori']);
-		$nama = htmlentities($_POST['nama_kategori']);
-		$tgl = htmlentities($_POST['tgl_input']);
-	
-		$data[] = $id;
-		$data[] = $nama;
-		$data[] = $tgl;
-		$sql = 'UPDATE kategori SET id_kategori=?, nama_kategori=?, tgl_iput=?  WHERE id_kategori=?';
-		$row = $config -> prepare($sql);
-		$row -> execute($data);
-		echo '<script>window.location="../../index.php?page=kategori/edit&kategori='.$id.'&success=edit-data"</script>';
-	}
-
 	if(!empty($_GET['gambar'])){
 		$id = htmlentities($_POST['id']);
 		set_time_limit(0);
